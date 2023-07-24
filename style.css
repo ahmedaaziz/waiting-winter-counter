@@ -1,0 +1,112 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("images/background.jpg");
+    font-family: "Poppins",sans-serif;
+    background-size: cover;
+    background-position:center center;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 100;
+    margin-top: 5rem;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    position: relative;
+    z-index: 10000;
+    
+}
+
+
+.count-down-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.big-text {
+    font-size: 6rem;
+    line-height: 1;
+    margin: 0 2rem;
+    font-weight: 600;
+}
+
+.counter-el {
+    text-align: center;
+}
+
+.counter-el span {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+}
+.snow,.snow::after,.snow::before {
+    content: "";
+    position: absolute;
+    top: -650px;
+    right:0;
+    left: 0;
+    bottom: 0;
+    background-image: 
+    radial-gradient(4px 4px at 100px 50px,#fff,transparent),
+    radial-gradient(6px 6px at 200px 150px,#fff,transparent),
+    radial-gradient(3px 3px at 300px 250px,#fff,transparent),
+    radial-gradient(4px 4px at 400px 350px,#fff,transparent),
+    radial-gradient(6px 6px at 500px 100px,#fff,transparent),
+    radial-gradient(3px 3px at 50px 200px,#fff,transparent),
+    radial-gradient(4px 4px at 150px 300px,#fff,transparent),
+    radial-gradient(6px 6px at 250px 400px,#fff,transparent),
+    radial-gradient(3px 3px at 350px 500px,#fff,transparent);
+    background-size: 650px 650px;
+    animation: snowAnim 3s linear;
+    animation-iteration-count: infinite;
+    /* animation-direction: reverse; */
+    animation-duration: 6s;
+
+}
+.snow:before {
+    margin-left: -350px;
+    opacity: 0.5;
+    filter: blur(1px);
+    /* animation-direction: reverse; */
+    animation-duration: 6s;
+}
+.snow:after {
+    margin-left: -250px;
+    opacity: 0.7;
+    filter: blur(1px);
+    /* animation-direction: reverse; */
+    animation-duration: 6s;
+}
+
+@keyframes snowAnim {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(650px);
+    }
+}
